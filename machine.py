@@ -124,8 +124,8 @@ def getdist(origin, dest):
     return distance
 
 def getFromUser():
-    dept = input("Enter departure airport")
-    dest = input("Enter destination")
+    dept = input("Enter departure airport: ")
+    dest = input("Enter destination: ")
 
     user_id = getidname(dest)
     print(user_id)
@@ -135,20 +135,16 @@ def getFromUser():
     print(user_id)
     print(rfc.predict([[user_id,user_day,0,user_dist]]))
     print(rfc.predict([[user_id,user_day,1,user_dist]]))
-def getFromString(dept, dest,user_day):
 
+def getFromString(dept, dest,user_day):
     user_id = getidname(dest)
-    print(user_id)
     user_dist = getdist(dept, dest)
-    print(user_dist)
-    print(user_id)
+
     returner = []
     returner.append(str(rfc.predict([[user_id,user_day,0,user_dist]])))
     returner.append(str(rfc.predict([[user_id,user_day,1,user_dist]])))
-    # returner[0] += " minutes"
-    # returner[1]+=" minutes"
+
     return returner
-    
 
 
 rfc = pickle.load(open('rfc.pkl','rb'))

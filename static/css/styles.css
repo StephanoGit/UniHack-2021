@@ -111,8 +111,23 @@
     color: #fff;
     font-size: 1.3rem;
     font-weight: 700;
+    text-align: center;
     background-color: #feba02;
     padding: 0.9em 0;
+    display: inline-block;
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+    margin-bottom: 1.3em;
+  }
+
+  .bttn_submit{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: #feba02;
+    padding: 0.9em 5em;
     display: inline-block;
     border: none;
     border-radius: 0.5em;
