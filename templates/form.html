@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rental Car Time Prediction</title>
+        <!-- Reset styles -->
+        <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+        <!-- Google Fonts Muli -->
+        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="container">
+                <div class="img__container">
+                <img src="static/css/plane_img.jpg" alt="salad" class="img"> 
+            </div>   
+                {% block content %}
+                    <div class="content">
+                        <h1>Expected time to car rental</h1>
+                        <!-- <p>{{ departure }}</p>
+                        <p>{{ destination }}</p>
+                        <p>{{ day }}</p> -->
+                        <br>
+                        <h3>By foot:</h3>
+                        <p>{{ final_result[0].replace('[','').replace(']','') }} mins</p>
+                        <br>
+                        <h3>By bus:</h3>
+                        <p>{{ final_result[1].replace('[','').replace(']','') }} mins</p>
+            
+                    </div>
+                {% endblock %}
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rental Car Time Prediction</title>
+        <!-- Reset styles -->
+        <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+        <!-- Google Fonts Muli -->
+        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="container">
+                <div class="img__container">
+                <img src="static/css/plane_img.jpg" alt="salad" class="img"> 
+            </div>   
+                <div class="content">
+                    <h1 class="title">Enter your flight</h1>
+                    <h2 class="subtitle">We will predict how long it will take to reach your rental car on arrival</h2>
+                    <form action="/results" method="POST">
+                        <input type="text" placeholder="Your Departure" class="departure" name="departure" required>
+                        <input type="text" placeholder="Your Destination" class="destination" name="destination" required>
+                        <input type="date" class="date" value="date" name="date">
+                        <input type="submit" value="Submit" class="submit">
+                    </form>
+                    <p class="text">Or try our beta-mode <br><a href="#">QR scanning</a></p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
