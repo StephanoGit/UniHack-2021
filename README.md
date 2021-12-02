@@ -16,6 +16,9 @@ We were challenged by Booking.com to develop in a 24-hour timeframe a website fo
 ## Algorithm and training model
 The training of the model was done using the Random Forest Classification method because of the high accuracy that it provides through cross validation. 
 Random forest, like its name implies, consists of many individual decision trees. Each individual tree in the random forest spits out a class prediction, and the class with the most votes becomes our model’s prediction.
+
+![RFC](https://github.com/StephanoGit/UniHack-2021/blob/master/other%20files/rfc.gif)
+
 We have decided to use 10 trees for our use as we observed that an increase would not make a difference in the accuracy of the results.
 
 ## Datasets Used
